@@ -1,6 +1,23 @@
 
--- lol menu
---height 400 width 600
+--[[
+	仿LOL选英雄menu
+	
+	local layer = display.newLayer()
+		:pos(display.cx/2,display.cy/2)
+		:addTo(self)
+    local myMenu = MyMenu.new(layer)
+	
+	local items = {}
+    for i=0,20,1 do
+        local label = cc.ui.UILabel.new({UILabelType = 1 ,text = i+1,size=256,font = "fonts/UIFont.fnt"})
+            :align(display.CENTER,(160),(115))
+            :addTo(layer)
+        items[i+1] = label
+    end
+	
+	myMenu:init(items)
+    myMenu:setIndex(10)
+]]
 local MyMenu = class("MyMenu")
 
 function MyMenu:ctor(scene)
