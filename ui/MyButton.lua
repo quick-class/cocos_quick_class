@@ -11,7 +11,7 @@ end)
 local MyButton = class("MyButton")
 function MyButton:ctor(params,scene,listener)
     self.listener = listener
-    self.button = cc.ui.UIPushButton.new("img/star.png")
+    self.button = cc.ui.UIPushButton.new(params)
         --:center()
         --:addTo(scene)
 end
